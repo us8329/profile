@@ -1,27 +1,187 @@
-<html>
+<!-- <!DOCTYPE html>
+<html lang="en">
 <head>
-  <link rel="stylesheet" type="text/css" href="main.css">
-  <title>Utkarsh Sinha</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Utkarsh Sinha Portfolio</title>
+  <link rel="stylesheet" href="main.css">
 </head>
 <body>
-  <p>Hi! My name is Utkarsh Sinha.</p>
-  <p>You can reach me out at my official - usinha3@illinois.edu
-  </p>
-  <p>I am currently a student at the University of Illinois Urbana Champaign , pursuing my Masters in Computer Science. I am interested in Computer Vision and Generative AI and have taken the following
-    courses which align with my interests 
-    <ul>
-      <li>CS440 Artificial Intelligence</li>
-      <li>CS444 Deep Learning for Computer Vision</li>
-      <li>CS512 Data Mining Principles</li>
-      <li>CS411 Database Systems</li>
-      <li>CS467 Social Visualisation</li>
-      <li>CS435 Computer Networks</li>
+  <section class="landing">
+    <div class="intro-row">
+      <img src="image.jpg" alt="Profile Picture" class="profile-pic">
+      <div class="intro-text">
+        <h1>Utkarsh Sinha</h1>
+        <h2>CS Graduate @ UIUC</h2>
+      </div>
+    </div>
+  
+    <div class="about">
+      <h3>About Me</h3>
+      <p>
+        I’m a passionate ML engineer focused on real-world impact through AI, CV, and smart automation.
+        I’m a passionate ML engineer focused on real-world impact through AI, CV, and smart automation.
+        I’m a passionate ML engineer focused on real-world impact through AI, CV, and smart automation.
+        I’m a passionate ML engineer focused on real-world impact through AI, CV, and smart automation.
+        I’m a passionate ML engineer focused on real-world impact through AI, CV, and smart automation.
+        I’m a passionate ML engineer focused on real-world impact through AI, CV, and smart automation.
+        I’m a passionate ML engineer focused on real-world impact through AI, CV, and smart automation.
+        I’m a passionate ML engineer focused on real-world impact through AI, CV, and smart automation.
+      </p>
+    </div>
+  </section>
+  
 
-    </ul>
-    I have experience as a software developer (backend) and as a Computer Vision Researcher during my undergraduate years, which can be seen in the resume.
-  </p>
-  <p>I completed my Bachelors in Computer Science from SRM Institute of Science and Technology in 2023 with Disctinction</p>
-  <p>My <a href="https://drive.google.com/file/d/1gybY5aJOBaqjkpxc8JPqkyURLnlRNakR/view?usp=share_link" target="_blank">resume</a></p>
+  <div class="experience-wrapper">
+    <section class="experience" id="experience">
+      <h2>My Experience</h2>
+    
+      <div class="experience-card">
+        <div class="experience-text">
+          <p>Developed industrial vision inspection systems at Kohler, saving $900K/system and reducing QA from 12 to 2 mins.</p>
+        </div>
+        <div class="experience-logo">
+          <img src="images/Kohler.jpeg" alt="Kohler Logo">
+        </div>
+      </div>
+    
+      <div class="experience-card">
+        <div class="experience-logo">
+          <img src="images/cloudkaptan.png" alt="CloudKaptan Logo">
+        </div>
+        <div class="experience-text">
+          <p>Automated REST API docs at CloudKaptan, cutting 400+ hours/year of manual effort using Django + DRF.</p>
+        </div>
+      </div>
+    
+      <div class="experience-card">
+        <div class="experience-text">
+          <p>Led breast tumor classification at NUS with ResNet50, improving accuracy by 6% over standard models.</p>
+        </div>
+        <div class="experience-logo">
+          <img src="images/nus.png" alt="NUS Logo">
+        </div>
+      </div>
+    
+      <div class="experience-card">
+        <div class="experience-logo">
+          <img src="images/pmx.png" alt="PMX Logo">
+        </div>
+        <div class="experience-text">
+          <p>Built nnU-Net model at PMX for emphysema detection, integrated into commercial product with 93% accuracy.</p>
+        </div>
+      </div>
+    
+      <div class="experience-card">
+        <div class="experience-text">
+          <p>Designed entity-aware summarizer with GNNs + NER, improving relevance by 30% on technical domains.</p>
+        </div>
+        <div class="experience-logo">
+          <img src="images/papertrue_logo.jpeg" alt="Project Logo">
+        </div>
+      </div>
+    </section>
+    
+
+
+  </div>
+</body>
+</html>
+ -->
+
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Utkarsh Sinha Portfolio</title>
+  <link rel="stylesheet" href="main.css">
+</head>
+<body>
+  <header>
+    <div class="toggle-container">
+      <label class="switch">
+        <input type="checkbox" id="theme-toggle">
+        <span class="slider round"></span>
+      </label>
+    </div>
+  </header>
+
+  <section class="landing">
+    <div class="intro-row">
+      <img src="image.jpg" alt="Profile Picture" class="profile-pic">
+      <div class="intro-text">
+        <h1>Utkarsh Sinha</h1>
+        <h2>CS Graduate @ UIUC</h2>
+      </div>
+    </div>
+
+    <div class="about">
+      <h3>About Me</h3>
+      <p>
+        I’m a passionate ML engineer focused on real-world impact through AI, CV, and smart automation.
+        I’m a passionate ML engineer focused on real-world impact through AI, CV, and smart automation.
+      </p>
+    </div>
+  </section>
+
+  <div class="experience-wrapper">
+    <section class="experience" id="experience">
+      <h2>My Experience</h2>
+
+      <div class="experience-card">
+        <div class="experience-text">
+          <p>Developed industrial vision systems at Kohler, saving $900K/system and reducing QA from 12 to 2 mins.</p>
+        </div>
+        <div class="experience-logo">
+          <img src="images/Kohler.jpeg" alt="Kohler Logo">
+        </div>
+      </div>
+
+      <div class="experience-card">
+        <div class="experience-logo">
+          <img src="images/cloudkaptan.png" alt="CloudKaptan Logo">
+        </div>
+        <div class="experience-text">
+          <p>Automated REST API docs at CloudKaptan, cutting 400+ hours/year of manual effort using Django + DRF.</p>
+        </div>
+      </div>
+      <div class="experience-card">
+        <div class="experience-text">
+          <p>Led breast tumor classification at NUS with ResNet50, improving accuracy by 6% over standard models.</p>
+        </div>
+        <div class="experience-logo">
+          <img src="images/nus.png" alt="NUS Logo">
+        </div>
+      </div>
+    
+      <div class="experience-card">
+        <div class="experience-logo">
+          <img src="images/pmx.png" alt="PMX Logo">
+        </div>
+        <div class="experience-text">
+          <p>Built nnU-Net model at PMX for emphysema detection, integrated into commercial product with 93% accuracy.</p>
+        </div>
+      </div>
+    
+      <div class="experience-card">
+        <div class="experience-text">
+          <p>Designed entity-aware summarizer with GNNs + NER, improving relevance by 30% on technical domains.</p>
+        </div>
+        <div class="experience-logo">
+          <img src="images/papertrue_logo.jpeg" alt="Project Logo">
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <script>
+    const toggle = document.getElementById("theme-toggle");
+    toggle.addEventListener("change", () => {
+      document.body.classList.toggle("dark-mode");
+    });
+  </script>
 </body>
 </html>
