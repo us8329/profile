@@ -181,6 +181,23 @@ header {
   right: 20px;
   z-index: 999;
 }
+.toggle-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background-color: transparent;
+  padding: 4px 8px;
+}
+
+.toggle-label {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #333;
+}
+
+body.dark-mode .toggle-label {
+  color: white;
+}
 
 /* Toggle Switch */
 .switch {
@@ -224,7 +241,7 @@ header {
 }
 
 input:checked + .slider {
-  background-color: #ff0000ce;
+  background-color: #000000ce;
 }
 
 input:checked + .slider:before {
