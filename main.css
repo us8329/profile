@@ -168,6 +168,7 @@ h2 {
 /* Base Styles */
 body {
   margin: 0;
+  line-height: 2;
   font-family: 'Montserrat', sans-serif;
   background-color: #ffffff;
   color: #333;
