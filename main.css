@@ -485,3 +485,10 @@ body.dark-mode .experience-card:hover {
 body.dark-mode .slider {
   border-color: white;  /* Reveal border */
 }
+
+.site-footer {
+  text-align: center;
+  padding: 20px;
+  font-size: 0.9rem;
+  color: #666;
+}
