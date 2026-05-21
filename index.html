@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Utkarsh Sinha</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      background: #fafafa;
+      color: #111;
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      font-weight: 400;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    ::selection { background: #111; color: #fafafa; }
+
+    .container {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 0 28px;
+    }
+
+    /* ─── NAV ─── */
+    nav {
+      padding: 32px 0 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 20px;
+      margin-bottom: 80px;
+    }
+
+    .logo {
+      font-size: 22px;
+      font-weight: 600;
+      letter-spacing: -0.5px;
+      color: #111;
+      text-decoration: none;
+    }
+
+    .nav-links { display: flex; gap: 28px; }
+
+    .nav-links a {
+      font-size: 14px;
+      font-weight: 500;
+      color: #888;
+      text-decoration: none;
+      transition: color .2s;
+      letter-spacing: 0.3px;
+      text-transform: uppercase;
+    }
+
+    .nav-links a:hover { color: #111; }
+
+    /* ─── HERO ─── */
+    .hero {
+      margin-bottom: 100px;
+    }
+
+    .hero h1 {
+      font-size: 56px;
+      font-weight: 700;
+      letter-spacing: -2px;
+      line-height: 1.1;
+      margin-bottom: 16px;
+      color: #111;
+    }
+
+    .hero .tagline {
+      font-size: 18px;
+      color: #666;
+      font-weight: 400;
+      max-width: 520px;
+      margin-bottom: 28px;
+    }
+
+    .contact-bar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px 24px;
+      font-size: 14px;
+      color: #555;
+    }
+
+    .contact-bar a {
+      color: #555;
+      text-decoration: none;
+      border-bottom: 1px solid transparent;
+      transition: border .2s, color .2s;
+    }
+
+    .contact-bar a:hover { color: #111; border-bottom-color: #111; }
+
+    /* ─── SECTION ─── */
+    section { margin-bottom: 80px; }
+
+    .section-head {
+      font-size: 13px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      color: #aaa;
+      margin-bottom: 28px;
+      border-bottom: 1px solid #eee;
+      padding-bottom: 8px;
+    }
+
+    /* ─── EDUCATION ─── */
+    .edu-item { margin-bottom: 36px; }
+
+    .edu-item:last-child { margin-bottom: 0; }
+
+    .edu-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      flex-wrap: wrap;
+      margin-bottom: 4px;
+    }
+
+    .edu-row .name { font-size: 18px; font-weight: 600; color: #111; }
+
+    .edu-row .date {
+      font-size: 14px;
+      color: #999;
+      font-weight: 400;
+    }
+
+    .edu-detail {
+      font-size: 14px;
+      color: #666;
+      margin-bottom: 4px;
+    }
+
+    .edu-detail strong { color: #333; font-weight: 500; }
+
+    .edu-courses {
+      font-size: 13px;
+      color: #999;
+      line-height: 1.5;
+    }
+
+    /* ─── EXPERIENCE ─── */
+    .exp-item {
+      margin-bottom: 48px;
+      padding-bottom: 48px;
+      border-bottom: 1px solid #f0f0f0;
+    }
+
+    .exp-item:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+
+    .exp-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      flex-wrap: wrap;
+      margin-bottom: 2px;
+    }
+
+    .exp-head .company {
+      font-size: 18px;
+      font-weight: 600;
+      color: #111;
+    }
+
+    .exp-head .role {
+      font-size: 15px;
+      color: #666;
+      font-weight: 400;
+      margin-bottom: 4px;
+    }
+
+    .exp-head .meta {
+      font-size: 13px;
+      color: #999;
+      text-align: right;
+    }
+
+    .exp-list {
+      margin-top: 12px;
+      padding-left: 20px;
+      list-style: none;
+    }
+
+    .exp-list li {
+      font-size: 14px;
+      color: #444;
+      margin-bottom: 10px;
+      position: relative;
+      line-height: 1.55;
+    }
+
+    .exp-list li::before {
+      content: "—";
+      position: absolute;
+      left: -20px;
+      color: #bbb;
+    }
+
+    /* ─── PROJECTS ─── */
+    .proj-item {
+      margin-bottom: 44px;
+      padding-bottom: 44px;
+      border-bottom: 1px solid #f0f0f0;
+    }
+
+    .proj-item:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+
+    .proj-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      flex-wrap: wrap;
+      margin-bottom: 4px;
+    }
+
+    .proj-head .name { font-size: 17px; font-weight: 600; color: #111; }
+
+    .proj-head .meta {
+      font-size: 13px;
+      color: #999;
+    }
+
+    .proj-desc {
+      font-size: 14px;
+      color: #444;
+      line-height: 1.55;
+    }
+
+    .proj-desc code {
+      font-family: 'Inter', monospace;
+      font-size: 13px;
+      background: #f0f0f0;
+      padding: 1px 6px;
+      border-radius: 3px;
+      color: #333;
+    }
+
+    .proj-desc a {
+      color: #555;
+      text-decoration: none;
+      border-bottom: 1px solid #ddd;
+      transition: border .2s, color .2s;
+    }
+
+    .proj-desc a:hover { color: #111; border-bottom-color: #111; }
+
+    .proj-desc strong { color: #222; font-weight: 500; }
+
+    .proj-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-top: 10px;
+    }
+
+    .proj-tags span {
+      font-size: 11px;
+      font-weight: 500;
+      color: #888;
+      background: #f5f5f5;
+      padding: 3px 10px;
+      border-radius: 12px;
+      letter-spacing: 0.2px;
+    }
+
+    /* ─── SKILLS ─── */
+    .skills-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 28px;
+    }
+
+    @media (max-width: 540px) { .skills-grid { grid-template-columns: 1fr; } }
+
+    .skill-group { break-inside: avoid; }
+
+    .skill-group .label {
+      font-size: 12px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: #bbb;
+      margin-bottom: 10px;
+    }
+
+    .skill-group .items {
+      font-size: 14px;
+      color: #444;
+      line-height: 1.7;
+    }
+
+    /* ─── FOOTER ─── */
+    footer {
+      border-top: 1px solid #eee;
+      padding: 32px 0 48px;
+      text-align: center;
+      font-size: 13px;
+      color: #bbb;
+    }
+
+    /* ─── RESPONSIVE ─── */
+    @media (max-width: 600px) {
+      nav { flex-direction: column; gap: 12px; align-items: flex-start; }
+      .hero h1 { font-size: 38px; }
+      .exp-head { flex-direction: column; }
+      .exp-head .meta { text-align: left; margin-top: 2px; }
+      .edu-row { flex-direction: column; }
+      .edu-row .date { margin-top: 2px; }
+      .proj-head { flex-direction: column; }
+      .proj-head .meta { margin-top: 2px; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+
+    <!-- NAV -->
+    <nav>
+      <a href="#" class="logo">Utkarsh Sinha</a>
+      <div class="nav-links">
+        <a href="#experience">Experience</a>
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+      </div>
+    </nav>
+
+    <!-- HERO -->
+    <div class="hero">
+      <h1>AI Engineer<br>building systems<br>that ship.</h1>
+      <p class="tagline">
+        Master's in CS at UIUC. Building AI-powered pipelines, multi-agent systems, and computer vision frameworks at Kohler &amp; SAP.
+      </p>
+      <div class="contact-bar">
+        <span>217‑904‑6375</span>
+        <a href="mailto:utkarshsinhap1@gmail.com">utkarshsinhap1@gmail.com</a>
+        <a href="https://linkedin.com/in/utkarshsinha03/" target="_blank">LinkedIn</a>
+        <a href="https://github.com/us8329" target="_blank">GitHub</a>
+      </div>
+    </div>
+
+    <!-- EDUCATION -->
+    <section>
+      <div class="section-head">Education</div>
+
+      <div class="edu-item">
+        <div class="edu-row">
+          <span class="name">University of Illinois Urbana-Champaign</span>
+          <span class="date">Aug 2023 – May 2025</span>
+        </div>
+        <div class="edu-detail"><strong>Master's in Computer Science</strong> &mdash; GPA 3.7 / 4.0</div>
+        <div class="edu-courses">Deep Learning for CV · Data Mining · AI · Database Management Systems</div>
+      </div>
+
+      <div class="edu-item">
+        <div class="edu-row">
+          <span class="name">SRM University</span>
+          <span class="date">Jun 2019 – May 2023</span>
+        </div>
+        <div class="edu-detail"><strong>Bachelor's in Computer Science</strong> &mdash; GPA 9.4 / 10</div>
+        <div class="edu-courses">Algorithms &amp; Data Structures · Computer Networking · Operating Systems · Data Analytics</div>
+      </div>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section id="experience">
+      <div class="section-head">Experience</div>
+
+      <div class="exp-item">
+        <div class="exp-head">
+          <div>
+            <div class="company">SAP Americas</div>
+            <div class="role">BTP AI Engineer Intern</div>
+          </div>
+          <div class="meta">Pittsburgh, PA &nbsp;·&nbsp; Aug 2025 – Present</div>
+        </div>
+        <ul class="exp-list">
+          <li>Built an AI-powered documentation pipeline on SAP BTP (AI Core, Cloud Foundry) leveraging GenAI to automate basis consultant documentation, eliminating 3 weeks of manual effort per engagement and becoming the standard reference across the team.</li>
+          <li>Streamlined 70+ pre-requisite validation checks for SAP HANA database migrations by building an agentic FastMCP pipeline that autonomously plans and executes tasks across OS, database, and application layers, replacing a fully manual workflow.</li>
+          <li>Powered daily project insights for 60+ directors across 5+ global regions by building a natural-language staffing platform with chained LLM routing (NLQ → SQL → response) over SAP HANA, fed by an ingestion pipeline that unified 1,000+ SharePoint files.</li>
+          <li>Architected a multi-agent coding assistant plugin for Eclipse IDE leveraging SAP AI Core and AI Launchpad, providing ABAP developers with code refactoring, error handling, and code comprehension capabilities with simpler setup and BTP-native integration.</li>
+        </ul>
+      </div>
+
+      <div class="exp-item">
+        <div class="exp-head">
+          <div>
+            <div class="company">Kohler Co.</div>
+            <div class="role">Machine Learning Engineer</div>
+          </div>
+          <div class="meta">Champaign, IL &nbsp;·&nbsp; May 2024 – May 2025</div>
+        </div>
+        <ul class="exp-list">
+          <li>Engineered a multi-factory inspection framework with concurrent pipelines for object detection, semantic segmentation (SAM), and monocular depth estimation (Marigold-LDM) to identify diverse manufacturing defects, driving over $600K in capital savings.</li>
+          <li>Built a 1.5K+ image dataset via self-annotation using Roboflow, augmented it 5× using PyTorch Transforms and deployed a defect-profiling system to standardize classification across all plants in North America, cutting manual-logging inconsistencies by 40%.</li>
+          <li>Prototyped deep learning models (YOLOv8, CNN ensembles, Vision Transformers) with MLflow for experiment tracking and model versioning, optimizing architecture and regularization to achieve 6× faster inference.</li>
+          <li>Containerized a real-time object detection system using Docker with FastAPI endpoints on Jetson edge devices, enabling CI/CD automation with unit tests for system robustness and cutting manual inspection workload by 200+ hours/week.</li>
+          <li>Engineered a predictive modeling framework on Databricks using feature engineering and correlation analysis on historical trend signals to train XGBoost and SVR models, optimizing viscosity-growth prediction accuracy and minimizing MSE.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects">
+      <div class="section-head">Projects</div>
+
+      <div class="proj-item">
+        <div class="proj-head">
+          <span class="name">Multi-Agent Website Cloner</span>
+          <span class="meta">Jan 2025 – Mar 2025</span>
+        </div>
+        <div class="proj-desc">
+          Architected a computer vision-driven multi-agent system that autonomously reconstructs web interfaces by analyzing UI screenshots and generating semantically structured HTML/CSS code using <strong>Autogen</strong>-powered agents. Engineered modular agents for visual parsing, code synthesis, and output evaluation, incorporating a self-correction feedback loop where rendered pages are iteratively compared with target screenshots to ensure pixel-level fidelity and high-quality UI replication.
+          <span style="display:block;margin-top:4px;"><a href="#">[code]</a></span>
+        </div>
+      </div>
+
+      <div class="proj-item">
+        <div class="proj-head">
+          <span class="name">Employee AI Assistant Chatbot with RAG</span>
+          <span class="meta">Oct 2024 – Dec 2024</span>
+        </div>
+        <div class="proj-desc">
+          Created an MVP that provides responses to user queries based on employee onboarding data in a vector database, integrating <strong>LangChain</strong>'s memory module to retain chat context for coherent interactions. Utilized <strong>OpenAI GPT-4</strong> and <strong>FAISS</strong> for vector similarity search with <strong>OpenAI Embeddings</strong>, and integrated a seamless interface via <strong>Streamlit</strong> for a multilingual user experience, reducing employee onboarding time.
+        </div>
+      </div>
+
+      <div class="proj-item">
+        <div class="proj-head">
+          <span class="name">Optimizing Diffusion Models for Image Generation</span>
+          <span class="meta">Mar 2024 – May 2024</span>
+        </div>
+        <div class="proj-desc">
+          Developed <strong>tiny-diffusion</strong> in <strong>PyTorch</strong>, incorporating interspersed convolution and self-attention in simpler U-Net blocks, achieving high-fidelity image generation with 0.025 L2 Loss on Nvidia A100 in 112 minutes of training. Integrated AI Safety principles — robustness (handling noisy inputs), interpretability (visualizing intermediate outputs), and fairness (evaluating generated images for bias across diverse datasets).
+          <span style="display:block;margin-top:4px;"><a href="#">[code]</a></span>
+        </div>
+      </div>
+
+      <div class="proj-item">
+        <div class="proj-head">
+          <span class="name">GNN-NER Based Text Summarization</span>
+          <span class="meta">Sep 2023 – Dec 2023</span>
+        </div>
+        <div class="proj-desc">
+          Architected a <strong>GNN-NER</strong>-based extractive summarization model with a custom entity relationship framework, transforming texts into structured entity graphs, boosting accuracy by 25% and relevance score by 30% across biomedical, legal, and technical domains.
+          <span style="display:block;margin-top:4px;"><a href="#">[paper]</a> &nbsp; <a href="#">[code]</a></span>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills">
+      <div class="section-head">Technical Skills</div>
+      <div class="skills-grid">
+        <div class="skill-group">
+          <div class="label">Languages &amp; Frameworks</div>
+          <div class="items">Python · C/C++ · SQL · PyTorch · TensorFlow · FastAPI · FastMCP · Flask · Streamlit · Django</div>
+        </div>
+        <div class="skill-group">
+          <div class="label">LLMs &amp; Agentic AI</div>
+          <div class="items">LangGraph · MCP · LangChain · Autogen · OpenAI API · Anthropic API · HuggingFace Transformers</div>
+        </div>
+        <div class="skill-group">
+          <div class="label">Classical ML &amp; Vision</div>
+          <div class="items">OpenCV · YOLOv8 · SAM · Vision Transformers · CNNs · BERT · GNNs · XGBoost · MLflow</div>
+        </div>
+        <div class="skill-group">
+          <div class="label">RAG, Fine-Tuning &amp; Inference</div>
+          <div class="items">FAISS · Pinecone · Chroma · OpenAI Embeddings · LoRA/QLoRA · PEFT · vLLM · LangSmith · RAGAS</div>
+        </div>
+        <div class="skill-group">
+          <div class="label">Data &amp; Tools</div>
+          <div class="items">PostgreSQL · MongoDB · Vector DBs (FAISS/Pinecone/Chroma, HANA) · Docker · Databricks · Azure · GCP · NVIDIA Jetson</div>
+        </div>
+        <div class="skill-group">
+          <div class="label">SAP</div>
+          <div class="items">BTP · SAC · DSP · AI Core · GenAI Hub · Joule Studio · Build Code · HANA Cloud · S4/HANA · Build Process Automation · Build Work Zone</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+      &copy; 2026 Utkarsh Sinha &nbsp;·&nbsp; Built with &lt;html /&gt; &amp; &lt;css /&gt;
+    </footer>
+
+  </div>
+
+</body>
+</html>
