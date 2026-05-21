@@ -10,12 +10,29 @@
     * { margin: 0; padding: 0; box-sizing: border-box; }
 
     body {
-      background: #fafafa;
       color: #111;
       font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
       font-weight: 400;
       line-height: 1.6;
       -webkit-font-smoothing: antialiased;
+      position: relative;
+    }
+
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      z-index: -2;
+      background: url('gabriel-dizzi-WPXxp36tkHQ-unsplash.jpg') center / cover fixed;
+      filter: grayscale(1) brightness(0.7);
+    }
+
+    body::after {
+      content: '';
+      position: fixed;
+      inset: 0;
+      z-index: -1;
+      background: rgba(0,0,0,0.6);
     }
 
     ::selection { background: #111; color: #fafafa; }
@@ -23,7 +40,14 @@
     .container {
       max-width: 720px;
       margin: 0 auto;
-      padding: 0 28px;
+      padding: 48px 40px;
+      background: rgba(255,255,255,0.92);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-radius: 16px;
+      margin-top: 40px;
+      margin-bottom: 40px;
+      box-shadow: 0 8px 40px rgba(0,0,0,0.15);
     }
 
     /* ─── NAV ─── */
