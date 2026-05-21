@@ -38,7 +38,7 @@
     ::selection { background: #fff; color: #111; }
 
     .container {
-      max-width: 720px;
+      max-width: 840px;
       margin: 0 auto;
       padding: 0 28px;
     }
@@ -118,21 +118,25 @@
     /* ─── SECTION ─── */
     section { margin-bottom: 80px; }
 
+    section:not(#skills) {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+      align-items: start;
+    }
+
     .section-head {
+      grid-column: 1 / -1;
       font-size: 13px;
       font-weight: 600;
       text-transform: uppercase;
       letter-spacing: 1.5px;
       color: rgba(255,255,255,0.4);
-      margin-bottom: 28px;
-      border-bottom: 1px solid rgba(255,255,255,0.1);
       padding-bottom: 8px;
+      border-bottom: 1px solid rgba(255,255,255,0.1);
     }
 
     /* ─── EDUCATION ─── */
-    .edu-item { margin-bottom: 36px; }
-
-    .edu-item:last-child { margin-bottom: 0; }
 
     .edu-row {
       display: flex;
@@ -165,13 +169,14 @@
     }
 
     /* ─── EXPERIENCE ─── */
-    .exp-item {
-      margin-bottom: 48px;
-      padding-bottom: 48px;
-      border-bottom: 1px solid rgba(255,255,255,0.08);
+    .exp-item, .proj-item, .edu-item {
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 6px;
+      padding: 20px;
+      transition: border .3s;
     }
 
-    .exp-item:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+    .exp-item:hover, .proj-item:hover, .edu-item:hover { border-color: rgba(255,255,255,0.25); }
 
     .exp-head {
       display: flex;
@@ -222,14 +227,6 @@
     }
 
     /* ─── PROJECTS ─── */
-    .proj-item {
-      margin-bottom: 44px;
-      padding-bottom: 44px;
-      border-bottom: 1px solid rgba(255,255,255,0.08);
-    }
-
-    .proj-item:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
-
     .proj-head {
       display: flex;
       justify-content: space-between;
@@ -324,14 +321,12 @@
     }
 
     /* ─── RESPONSIVE ─── */
-    @media (max-width: 600px) {
+    @media (max-width: 700px) {
+      section:not(#skills) { grid-template-columns: 1fr; }
       nav { flex-direction: column; gap: 12px; align-items: flex-start; }
       .hero h1 { font-size: 38px; }
-      .exp-head { flex-direction: column; }
       .exp-head .meta { text-align: left; margin-top: 2px; }
-      .edu-row { flex-direction: column; }
       .edu-row .date { margin-top: 2px; }
-      .proj-head { flex-direction: column; }
       .proj-head .meta { margin-top: 2px; }
     }
   </style>
