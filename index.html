@@ -170,13 +170,13 @@
 
     /* ─── EXPERIENCE ─── */
     .exp-item, .proj-item, .edu-item {
-      border: 1px solid rgba(255,255,255,0.08);
+      border: 1px solid transparent;
       border-radius: 6px;
       padding: 20px;
       transition: border .3s;
     }
 
-    .exp-item:hover, .proj-item:hover, .edu-item:hover { border-color: rgba(255,255,255,0.25); }
+    .exp-item:hover, .proj-item:hover, .edu-item:hover { border-color: rgba(255,255,255,0.2); }
 
     .exp-head {
       display: flex;
@@ -294,6 +294,8 @@
 
     @media (max-width: 540px) { .skills-grid { grid-template-columns: 1fr; } }
 
+    #outside { display: block; }
+
     .skill-group { break-inside: avoid; }
 
     .skill-group .label {
@@ -390,15 +392,15 @@
         <div class="exp-head">
           <div>
             <div class="company">SAP Americas</div>
-            <div class="role">BTP AI Engineer Intern</div>
+            <div class="role">BTP AI Engineer</div>
           </div>
           <div class="meta">Pittsburgh, PA &nbsp;·&nbsp; Aug 2025 – Present</div>
         </div>
         <ul class="exp-list">
-          <li>Built an AI-powered documentation pipeline on SAP BTP (AI Core, Cloud Foundry) leveraging GenAI to automate basis consultant documentation, eliminating 3 weeks of manual effort per engagement and becoming the standard reference across the team.</li>
-          <li>Streamlined 70+ pre-requisite validation checks for SAP HANA database migrations by building an agentic FastMCP pipeline that autonomously plans and executes tasks across OS, database, and application layers, replacing a fully manual workflow.</li>
-          <li>Powered daily project insights for 60+ directors across 5+ global regions by building a natural-language staffing platform with chained LLM routing (NLQ → SQL → response) over SAP HANA, fed by an ingestion pipeline that unified 1,000+ SharePoint files.</li>
-          <li>Architected a multi-agent coding assistant plugin for Eclipse IDE leveraging SAP AI Core and AI Launchpad, providing ABAP developers with code refactoring, error handling, and code comprehension capabilities with simpler setup and BTP-native integration.</li>
+          <li>Eliminated 3 weeks of manual effort per engagement by shipping a GenAI documentation pipeline on SAP BTP that auto-generates basis consultant deliverables — adopted as the team standard.</li>
+          <li>Replaced a fully manual HANA migration workflow by automating 70+ pre-requisite validation checks with an agentic FastMCP pipeline spanning OS, database, and application layers.</li>
+          <li>Built a BTP-native multi-agent coding assistant for Eclipse IDE, giving ABAP developers in-editor refactoring, error handling, and code comprehension via SAP AI Core.</li>
+          <li>Gave 60+ directors across 5 global regions daily staffing insights by building a natural-language platform with chained LLM routing over SAP HANA, backed by a pipeline that ingested 1,000+ SharePoint files.</li>
         </ul>
       </div>
 
@@ -411,11 +413,11 @@
           <div class="meta">Champaign, IL &nbsp;·&nbsp; May 2024 – May 2025</div>
         </div>
         <ul class="exp-list">
-          <li>Engineered a multi-factory inspection framework with concurrent pipelines for object detection, semantic segmentation (SAM), and monocular depth estimation (Marigold-LDM) to identify diverse manufacturing defects, driving over $600K in capital savings.</li>
-          <li>Built a 1.5K+ image dataset via self-annotation using Roboflow, augmented it 5× using PyTorch Transforms and deployed a defect-profiling system to standardize classification across all plants in North America, cutting manual-logging inconsistencies by 40%.</li>
-          <li>Prototyped deep learning models (YOLOv8, CNN ensembles, Vision Transformers) with MLflow for experiment tracking and model versioning, optimizing architecture and regularization to achieve 6× faster inference.</li>
-          <li>Containerized a real-time object detection system using Docker with FastAPI endpoints on Jetson edge devices, enabling CI/CD automation with unit tests for system robustness and cutting manual inspection workload by 200+ hours/week.</li>
-          <li>Engineered a predictive modeling framework on Databricks using feature engineering and correlation analysis on historical trend signals to train XGBoost and SVR models, optimizing viscosity-growth prediction accuracy and minimizing MSE.</li>
+          <li>Drove $600K+ in capital savings by building a concurrent multi-factory defect inspection framework combining object detection, SAM segmentation, and monocular depth estimation (Marigold-LDM).</li>
+          <li>Cut manual inspection workload by 200+ hours/week by containerizing a real-time detection system with Docker and FastAPI on Jetson edge devices with full CI/CD and unit test coverage.</li>
+          <li>Standardized defect classification across all North American plants, reducing logging inconsistencies by 40%, by self-annotating a 1.5K-image dataset and deploying a profiling system with 5× PyTorch augmentation.</li>
+          <li>Achieved 6× faster inference by benchmarking YOLOv8, CNN ensembles, and Vision Transformers under MLflow tracking and tuning model architecture and regularization.</li>
+          <li>Minimized MSE on viscosity-growth prediction by training XGBoost and SVR models on Databricks with feature engineering and correlation analysis over historical trend signals.</li>
         </ul>
       </div>
     </section>
@@ -430,20 +432,11 @@
           <span class="meta">Jan 2025 – Mar 2025</span>
         </div>
         <div class="proj-desc">
-          Architected a computer vision-driven multi-agent system that autonomously reconstructs web interfaces by analyzing UI screenshots and generating semantically structured HTML/CSS code using <strong>Autogen</strong>-powered agents. Engineered modular agents for visual parsing, code synthesis, and output evaluation, incorporating a self-correction feedback loop where rendered pages are iteratively compared with target screenshots to ensure pixel-level fidelity and high-quality UI replication.
+          Reconstructed web UIs with pixel-level fidelity from screenshots using a CV-driven <strong>Autogen</strong> multi-agent system — modular agents handle visual parsing, code synthesis, and self-correction by iteratively comparing renders against the target.
           <span style="display:block;margin-top:4px;"><a href="#">[code]</a></span>
         </div>
       </div>
 
-      <div class="proj-item">
-        <div class="proj-head">
-          <span class="name">Employee AI Assistant Chatbot with RAG</span>
-          <span class="meta">Oct 2024 – Dec 2024</span>
-        </div>
-        <div class="proj-desc">
-          Created an MVP that provides responses to user queries based on employee onboarding data in a vector database, integrating <strong>LangChain</strong>'s memory module to retain chat context for coherent interactions. Utilized <strong>OpenAI GPT-4</strong> and <strong>FAISS</strong> for vector similarity search with <strong>OpenAI Embeddings</strong>, and integrated a seamless interface via <strong>Streamlit</strong> for a multilingual user experience, reducing employee onboarding time.
-        </div>
-      </div>
 
       <div class="proj-item">
         <div class="proj-head">
@@ -451,7 +444,7 @@
           <span class="meta">Mar 2024 – May 2024</span>
         </div>
         <div class="proj-desc">
-          Developed <strong>tiny-diffusion</strong> in <strong>PyTorch</strong>, incorporating interspersed convolution and self-attention in simpler U-Net blocks, achieving high-fidelity image generation with 0.025 L2 Loss on Nvidia A100 in 112 minutes of training. Integrated AI Safety principles — robustness (handling noisy inputs), interpretability (visualizing intermediate outputs), and fairness (evaluating generated images for bias across diverse datasets).
+          Hit 0.025 L2 Loss in 112 minutes on an A100 by building <strong>tiny-diffusion</strong> in <strong>PyTorch</strong> — compact U-Net blocks with interspersed convolution and self-attention, with robustness, interpretability, and fairness baked into evaluation.
           <span style="display:block;margin-top:4px;"><a href="#">[code]</a></span>
         </div>
       </div>
@@ -462,7 +455,7 @@
           <span class="meta">Sep 2023 – Dec 2023</span>
         </div>
         <div class="proj-desc">
-          Architected a <strong>GNN-NER</strong>-based extractive summarization model with a custom entity relationship framework, transforming texts into structured entity graphs, boosting accuracy by 25% and relevance score by 30% across biomedical, legal, and technical domains.
+          Boosted summarization accuracy by 25% and relevance by 30% across biomedical, legal, and technical domains by transforming texts into entity graphs with a custom <strong>GNN-NER</strong> extractive model.
           <span style="display:block;margin-top:4px;"><a href="#">[paper]</a> &nbsp; <a href="#">[code]</a></span>
         </div>
       </div>
@@ -499,9 +492,17 @@
       </div>
     </section>
 
+    <!-- OUTSIDE WORK -->
+    <section id="outside">
+      <div class="section-head">Outside of Work</div>
+      <div class="items" style="font-size:14px;color:rgba(255,255,255,0.7);line-height:1.7;grid-column:1/-1;">
+        Piano · Guitar · Vinyl Collector · Surfing · Skiing · Volleyball · Tennis · Table Tennis · Bouldering · Weightlifting · Doomscrolling 
+      </div>
+    </section>
+
     <!-- FOOTER -->
     <footer>
-      &copy; 2026 Utkarsh Sinha &nbsp;·&nbsp; Built with &lt;html /&gt; &amp; &lt;css /&gt;
+      Utkarsh Sinha &nbsp;
     </footer>
 
   </div>
